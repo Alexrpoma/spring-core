@@ -3,7 +3,6 @@ package com.example.spring_core.demo;
 import com.example.spring_core.demo.employees.Director;
 import com.example.spring_core.demo.employees.Employee;
 import com.example.spring_core.demo.reports.DirectorReport;
-import com.example.spring_core.demo.reports.Report;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

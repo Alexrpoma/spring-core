@@ -3,7 +3,6 @@ package com.example.spring_core.demo.employees;
 import com.example.spring_core.demo.reports.Report;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
