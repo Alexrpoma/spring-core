@@ -1,9 +1,12 @@
 package com.example.spring_core.demo.employees;
 
 import com.example.spring_core.demo.reports.Report;
+import org.springframework.beans.factory.annotation.Value;
 
 public class Director implements Employee{
 
+  @Value("${director.description}")
+  private String description;
   private final Report report;
 
   public Director(Report report) {
@@ -12,7 +15,7 @@ public class Director implements Employee{
 
   @Override
   public String description() {
-    return "Creating business strategies and proposing implementation methods.";
+    return description;
   }
 
   @Override

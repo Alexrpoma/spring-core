@@ -2,11 +2,14 @@ package com.example.spring_core.demo.employees;
 
 import com.example.spring_core.demo.reports.Report;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Secretary implements Employee {
 
+  @Value("${secretary.description}")
+  private String description;
   private final Report report;
 
   public Secretary(@Qualifier("secretaryReport") Report report) { //Dependency injection report -> SecretaryReport
@@ -15,11 +18,7 @@ public class Secretary implements Employee {
 
   @Override
   public String description() {
-    return """
-        Answer phone calls and redirect them when necessary.
-        Manage the daily/weekly/monthly agenda and arrange
-        new meetings and appointments.
-        """;
+    return description;
   }
 
   @Override

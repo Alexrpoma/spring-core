@@ -7,8 +7,10 @@ import com.example.spring_core.demo.reports.Report;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("application.properties")
 @ComponentScan("com.example.spring_core.demo") // Scan packages where it can find @Components (beans)
 public class CustomConfig {
 
