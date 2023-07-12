@@ -1,15 +1,16 @@
-package com.example.spring_core.demo;
+package com.example.spring_core.demo.employees;
 
+import com.example.spring_core.demo.reports.Report;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Manager implements Employee{
 
-  private final Inform inform;
+  private final Report report;
 
-  public Manager(@Qualifier("managerInform") Inform inform) { // Dependency injection inform -> ManagerInform
-    this.inform = inform;
+  public Manager(@Qualifier("managerReport") Report report) { // Dependency injection report -> ManagerReport
+    this.report = report;
   }
 
   @Override
@@ -20,7 +21,7 @@ public class Manager implements Employee{
         """;
   }
 
-  public String inform() {
-    return inform.showInform();
+  public String report() {
+    return report.showReport();
   }
 }
