@@ -8,7 +8,7 @@ public class Secretary implements Employee {
 
   private final Inform inform;
 
-  public Secretary(@Qualifier("secretaryInform") Inform inform) {
+  public Secretary(@Qualifier("secretaryInform") Inform inform) { //Dependency injection inform -> SecretaryInform
     this.inform = inform;
   }
 

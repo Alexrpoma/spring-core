@@ -1,6 +1,5 @@
 package com.example.spring_core.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
@@ -9,7 +8,7 @@ public class Manager implements Employee{
 
   private final Inform inform;
 
-  public Manager(@Qualifier("managerInform") Inform inform) {
+  public Manager(@Qualifier("managerInform") Inform inform) { // Dependency injection inform -> ManagerInform
     this.inform = inform;
   }
 
