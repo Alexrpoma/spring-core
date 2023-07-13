@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-//@PropertySource("application.properties")
 public class Manager implements Employee{
 
   @Value("${manager.description}")
